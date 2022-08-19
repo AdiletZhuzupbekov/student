@@ -15,15 +15,15 @@ public class Groups {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
-    String name;
+    private Long id;
+    private String name;
     @ManyToOne
     @JoinColumn(name = "course_id")
-    Courses courses;
-    Date startDate;
-    Date endDate;
+    private Courses courses;
+    private Date startDate;
+    private Date endDate;
     @ManyToOne
     @JoinColumn(name = "id_teachers")
-    Teachers teachers;
+    private Teachers teachers;
 
 }

@@ -15,15 +15,15 @@ import java.util.Date;
 public class StudentGroups {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
+    private Long id;
     @ManyToOne
     @JoinColumn(name = "id_students")
-    Students students;
+    private Students students;
     @ManyToOne
     @JoinColumn(name = "id_groups")
-    Groups groups;
-    Date startDate;
-    Date endDate;
+    private Groups groups;
+    private Date startDate;
+    private Date endDate;
     @Enumerated(value = EnumType.STRING)
-    StudentStatus studentStatus;
+    private StudentStatus studentStatus;
 }

@@ -14,10 +14,10 @@ public class Students {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
-    String name;
-    String surName;
-    String title;
+    private Long id;
+    private String name;
+    private String surName;
+    private String title;
 
 
 }
