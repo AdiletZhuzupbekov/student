@@ -17,4 +17,5 @@ public class Students {
     private String name;
     private String surName;
     private String title;
+    private Boolean isDeleted;
 }

@@ -1,11 +1,9 @@
 package kg.megacom.student.controllers;
 
 import kg.megacom.student.models.Teachers;
+import kg.megacom.student.models.dto.TeacherDto;
 import kg.megacom.student.services.TeachersService;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/student/v1")
@@ -17,7 +15,15 @@ public class TeacherController {
     }
 
     @PostMapping("/add-teacher")
-    public Object addTeacher(@RequestBody Teachers teachers){
-        return teachersService.addTeacher(teachers);
+    public Object addTeacher(@RequestBody TeacherDto teacherDto){
+        return teachersService.addTeacher(teacherDto);
+    }
+    @PostMapping("/delete-teacher")
+    public void deleteTeacher(@RequestBody TeacherDto teacherDto){
+        teachersService.deleteTeacher(teacherDto);
+    }
+    @GetMapping("/list-teacher")
+    public Object teacherList(){
+        return teachersService.listTeacher();
     }
 }

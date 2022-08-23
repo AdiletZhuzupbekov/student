@@ -1,5 +1,6 @@
 package kg.megacom.student.models;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import kg.megacom.student.models.enums.StudentStatus;
 import lombok.AccessLevel;
 import lombok.Data;
@@ -22,7 +23,11 @@ public class StudentGroups {
     @ManyToOne
     @JoinColumn(name = "id_groups")
     private Groups groups;
+    @JsonFormat(
+            shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy@HH:mm:ss.SSS", locale = "en_GB")
     private Date startDate;
+    @JsonFormat(
+            shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy@HH:mm:ss.SSS", locale = "en_GB")
     private Date endDate;
     @Enumerated(value = EnumType.STRING)
     private StudentStatus studentStatus;
