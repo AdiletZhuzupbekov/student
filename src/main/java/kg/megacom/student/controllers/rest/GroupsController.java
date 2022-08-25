@@ -1,6 +1,7 @@
-package kg.megacom.student.controllers;
+package kg.megacom.student.controllers.rest;
 
-import kg.megacom.student.models.dto.GroupsDto;
+import kg.megacom.student.models.Groups;
+import kg.megacom.student.models.requests.GroupRequest;
 import kg.megacom.student.services.GroupService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -17,8 +18,9 @@ public class GroupsController {
         this.groupService = groupService;
     }
 
-    @PostMapping("/add-group")
-    public Object addGroup(@RequestBody GroupsDto groupsDto){
-        return groupService.toEntity(groupsDto);
+
+    @PostMapping("/create-group")
+    public Groups create(@RequestBody GroupRequest groupRequest){
+        return groupService.create(groupRequest);
     }
 }

@@ -1,8 +1,14 @@
 package kg.megacom.student.services;
 
 import kg.megacom.student.models.Groups;
-import kg.megacom.student.models.dto.GroupsDto;
+import kg.megacom.student.models.dto.CourseDto;
+import kg.megacom.student.models.requests.GroupRequest;
+import org.springframework.http.ResponseEntity;
+
+import java.util.Date;
 
 public interface GroupService {
-    Groups toEntity(GroupsDto groupsDto);
+    Groups createGroup(Groups group);
+
+    Groups create(GroupRequest groupRequest);
 }

@@ -28,4 +28,5 @@ public class Payments {
     private Date paymentDate;
     @Enumerated(value = EnumType.STRING)
     private PaymentStatus paymentStatus;
+    private double payment;
 }

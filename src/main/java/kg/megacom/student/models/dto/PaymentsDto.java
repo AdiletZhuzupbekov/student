@@ -19,4 +19,5 @@ public class PaymentsDto {
     StudentsDto students;
     Date paymentDate;
     PaymentStatus paymentStatus;
+    private double payment;
 }

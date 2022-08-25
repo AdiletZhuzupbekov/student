@@ -1,4 +1,4 @@
-package kg.megacom.student.controllers;
+package kg.megacom.student.controllers.rest;
 
 import kg.megacom.student.models.Teachers;
 import kg.megacom.student.models.dto.TeacherDto;

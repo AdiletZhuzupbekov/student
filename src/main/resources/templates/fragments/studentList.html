@@ -1,0 +1,20 @@
+<div th:fragment="studentlist" >
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Surname</th>
+      <th scope="col">Title</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="student:${students}">
+      <th scope="row"></th>
+      <td th:text="${student.name}"></td>
+      <td th:text="${student.surName}"></td>
+      <td th:text="${student.title}"></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
