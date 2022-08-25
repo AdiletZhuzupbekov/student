@@ -8,7 +8,6 @@ import org.springframework.http.ResponseEntity;
 import java.util.Date;
 
 public interface GroupService {
-    Groups createGroup(Groups group);
-
     Groups create(GroupRequest groupRequest);
+    Groups findById(Long groupId);
 }

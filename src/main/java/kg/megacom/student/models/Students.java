@@ -17,7 +17,5 @@ public class Students {
     private String name;
     private String surName;
     private String title;
-    @Column(name = "is_deleted")
-    private boolean isDeleted;
-    private double debt;
+
 }

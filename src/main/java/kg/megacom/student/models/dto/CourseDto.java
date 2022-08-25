@@ -11,8 +11,9 @@ import lombok.experimental.FieldDefaults;
 @AllArgsConstructor
 @NoArgsConstructor
 public class CourseDto {
-    Long id;
-    String title;
-    double price;
-    Integer duration;
+    private Long id;
+    private String title;
+    private double price;
+    private Integer duration;
+    private Integer period;
 }

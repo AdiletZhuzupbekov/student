@@ -8,8 +8,6 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
-
 @Repository
 public interface StudentRepo extends JpaRepository<Students,Long> {
     @Modifying(clearAutomatically = true)
@@ -17,5 +15,4 @@ public interface StudentRepo extends JpaRepository<Students,Long> {
     @Query(value = "update students set title = ?2 where id = ?1", nativeQuery = true)
     void update(@Param("id") Long id, @Param("title") String title);
 
-    List<Students> findAllByIsDeletedIsFalse();
 }
